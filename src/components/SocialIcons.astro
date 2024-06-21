@@ -1,0 +1,64 @@
+---
+const {width, height} = Astro.props;
+const socialLinks = [
+	{
+		title: 'LinkedIn',
+		icon: 'simple-icons:linkedin',
+		href: 'https://www.linkedin.com/in/nitheesh-sudarsanan-963721178/',
+
+	},
+	{
+		title: 'GitHub',
+		icon: 'mdi:github',
+		href: 'https://github.com/nteezzz',
+
+	},
+	{
+		title: 'Resume',
+		icon: 'tabler:file-cv',
+		href: '../docs/3043_NitheeshSudarsanan.pdf',
+
+	},
+];
+---
+
+<div class="icons-container">
+    {
+        socialLinks.map((data) => (
+            <a
+                href={data.href}
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+            >
+                <iconify-icon
+					class=`skill-icon ${data.title}`
+                    icon={data.icon}
+                    width={width}
+                    height={height}
+                />
+            </a>
+        ))
+    }
+</div>
+
+<style>
+	.icons-container {
+		display: flex;
+    width: 29.6rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.skill-icon{
+	color:#dcd8fc;
+}
+	.LinkedIn:hover{
+		color: #0e76a8;
+	}
+	.GitHub:hover{
+	color: #E1306C;
+	}
+	.Resume:hover{
+		color:#8e64ff;
+	}
+</style>

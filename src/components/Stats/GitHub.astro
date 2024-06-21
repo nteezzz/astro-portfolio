@@ -1,0 +1,48 @@
+---
+const username = 'nteezzz'; // Replace with your GitHub username
+---
+
+<section id="github-stats" class="flex flex-col items-center w-full min-h-screen py-16 bg-gray-100">
+  <div class="github-container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center color-gradient">GitHub Stats</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <img 
+        src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=onedark`} 
+        alt="GitHub Stats" 
+        class="max-w-full h-auto"
+      />
+      <img 
+        src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=onedark`} 
+        alt="GitHub Streak" 
+        class="max-w-full h-auto"
+      />
+    </div>
+    <div class="flex flex-wrap trophies-container justify-center gap-6 mt-8">
+      <img 
+        src={`https://github-profile-trophy.vercel.app/?username=${username}&theme=onedark`} 
+        alt="GitHub Trophies" 
+        class="max-w-full h-auto"
+      />
+    </div>
+    <!-- <div class="flex flex-wrap justify-center gap-6 mt-8">
+        <img 
+        src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical`} 
+        alt="Top Languages" 
+        class="max-w-full h-auto"
+      />
+    </div> -->
+  </div>
+</section>
+
+<style>
+    .github-container{
+        padding: 12rem;
+        justify-content: center;
+    }
+    @media screen and (max-width: 768px) {
+        .github-container{
+            display: none;
+        }
+    }
+  
+</style>

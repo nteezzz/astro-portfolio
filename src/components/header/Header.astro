@@ -1,0 +1,33 @@
+---
+import './header.css';
+const { origin } = Astro.props;
+---
+
+<header class="header">
+  <div class="header-container">
+    <a href="/" class="profile">
+      <h3 class="color-gradient header-title">
+        Nteezzz's Portfolio
+      </h3>
+    </a>
+    <nav class="links" tabindex="0">
+      <ul class="header-list ">
+        {origin.map((data: { link: string, content: string, icon: string }) => (
+          <li class={data.content === 'GitHub Stats' ? 'github-stats' : ''}>
+            <a class="menu-link" href={data.link}>
+              <span class="icon-container">
+                <iconify-icon
+                  class="icons"
+                  icon={data.icon}
+                  width="20"
+                  height="20"
+                />
+                {data.content}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

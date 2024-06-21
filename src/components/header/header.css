@@ -1,0 +1,117 @@
+.header {
+	display: flex;
+	width: 100%;
+	padding: 2rem;
+	justify-content: center;
+	align-items: center;
+	color: var(--on-primary);
+	position: fixed;
+	z-index: 3;
+  }
+  
+  .header .header-container {
+	display: flex;
+	width: 100%;
+	max-width: var(--max-width);
+	justify-content: space-between;
+	background: #00000033;
+	backdrop-filter: blur(20px);
+	padding: 1rem 2rem;
+	border-radius: 14px;
+	height: auto;
+	min-height: 7rem;
+	border: 0.03px solid #ccb6f447;
+	flex-wrap: wrap;
+  }
+  
+  .header .profile .header-title {
+	font-size: var(--text-title);
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+  }
+  
+  .header .header-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 2rem;
+	margin-right: 4.4rem;
+  }
+  
+  .header .links {
+	display: flex;
+	gap: 22px;
+	font-size: var(--text-general);
+	color: #ffffff;
+  }
+  
+  .header .links a {
+	position: relative;
+	text-decoration: none;
+  }
+  
+  .header .links a::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	transform: scaleX(0);
+	transform-origin: 0;
+	height: 2px;
+	background: var(--primary);
+	transition: 0.35s transform;
+  }
+  
+  .header li {
+	list-style: none;
+  }
+  
+  .header .links a:hover {
+	color: var(--primary-90);
+  }
+  
+  .header .links a:hover::after {
+	transform: scale(1);
+  }
+  
+  .icons {
+	display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.header .header-title {
+	  display: none;
+	}
+	.header-list{
+		justify-content: space-between;
+	}
+	.header .header-container{
+		justify-content: center;
+		
+	}
+  
+	.github-stats {
+	  display: none;
+	}
+  }
+  
+  .profile {
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	gap: 1.5rem;
+	text-decoration: none;
+	color: #ccb6f447;
+  }
+  
+  @keyframes scroll-btn {
+	0%, 1% {
+	  opacity: 0;
+	}
+	2% {
+	  opacity: inherit;
+	}
+  }
+  

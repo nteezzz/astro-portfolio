@@ -1,0 +1,70 @@
+---
+import Title from '../atoms/Title.astro';
+import { getPortafolioData} from "../data/portfolioData.js"
+import Card from './card-portfolio/CardPortfolio.astro';
+---
+
+<section
+	id="portfolio"
+	class="flex flex-col w-full  justify-center items-center h-auto min-h-[100dvh]  "
+>
+
+	<div class="portfolio-container">
+		<h2 class="color-gradient project-title">Projects</h2>
+		<div class="portfolio-elements">
+			{getPortafolioData.map((props) => <Card {...props} />)}
+		</div>
+	</div>
+</section>
+
+<style>
+	.project-title h2 {
+	font-size: 5rem;
+	font-weight: 500;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-orientation:upright;
+}
+	.portfolio-container{
+		width: 100%;
+		display: flex;
+		padding: 10rem;
+		padding-top: 14rem;
+		padding-bottom: 10rem;
+	}
+	.portfolio-elements {
+		max-width: var(--max-width);
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+	@media screen and (max-width: 768px) {
+	.portfolio-container {
+		padding: 8rem 3.1rem;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+
+</style>
+
+<script>
+	import { getIMGAverageColor } from '../../utils/average-img-color/average-img-color';
+	const $cards = document.querySelectorAll('.card-portfolio');
+	$cards.forEach((card) => {
+		const $container = card.querySelector<HTMLDivElement>(
+			'.descripcion-container'
+		);
+		const $img = card.querySelector('img');
+		if (!$img || !$container) return;
+
+		const setBg = () => {
+			const [rbgString] = getIMGAverageColor($img, 0.7);
+			$container.style.background = rbgString;
+		};
+		setBg();
+		$img.onload = setBg;
+	});
+</script>

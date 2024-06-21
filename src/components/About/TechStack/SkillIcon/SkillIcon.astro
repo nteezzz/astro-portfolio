@@ -1,0 +1,13 @@
+---
+import skillIcon from './skill-icon.module.css';
+interface Props {
+	name: string;
+	src: string;
+	color: string;
+}
+const { name, src, color } = Astro.props;
+---
+<div class={skillIcon.base} style=`--icon-color: ${color};`>
+	<div class={skillIcon.icon} style=`--svg: url(${src})`></div>
+	<span class={skillIcon.name}>{name}</span>
+</div>

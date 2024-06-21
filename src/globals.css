@@ -1,0 +1,107 @@
+:root {
+  /* Shades of grey */
+  --primary-0: #1a1a1a;
+  --primary-10: #333333;
+  --primary-20: #4d4d4d;
+  --primary-30: #666666;
+  --primary-40: #808080;
+  --primary-50: #999999;
+  --primary-60: #b3b3b3;
+  --primary-70: #cccccc;
+  --primary-80: #e6e6e6;
+  --primary-90: #f2f2f2;
+  --primary-95: #f9f9f9;
+  --primary-99: #fcfcfc;
+  --primary-100: #ffffff;
+
+  --secondary-0: #1a1a1a;
+  --secondary-10: #333333;
+  --secondary-20: #4d4d4d;
+  --secondary-30: #666666;
+  --secondary-40: #808080;
+  --secondary-50: #999999;
+  --secondary-60: #b3b3b3;
+  --secondary-70: #cccccc;
+  --secondary-80: #e6e6e6;
+  --secondary-90: #f2f2f2;
+  --secondary-95: #f9f9f9;
+  --secondary-99: #fcfcfc;
+  --secondary-100: #ffffff;
+
+  /* Shades of grey for other properties */
+  --surface: #333333;
+  --surface-variant: #f2f2f2;
+  --surface-dim: #808080;
+  --surface-bridge: #cccccc;
+
+  /* Adjusted text and background colors */
+  --primary: var(--primary-60);
+  --on-surface-primary: var(--primary-10);
+  --on-primary: var(--primary-95);
+
+  --secondary: var(--secondary-70);
+  --on-surface-secondary: var(--secondary-95);
+  --on-secondary: var(--secondary-95);
+
+  /* Text sizes and fonts remain unchanged */
+  --text-small: 1.2rem;
+  --text-medium: 1.4rem;
+  --text-large: 1.6rem;
+  --text-x-large: 2rem;
+  --text-xx-large: 3.1rem;
+  --text-xxx-large: 4.4rem;
+  --text-title: 2rem;
+  --text-general: 1.6rem;
+  --text-button: 1.2rem;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --max-width: 108rem;
+  --site-bg: var(--primary-0);
+  --hero-bg: linear-gradient(
+      -54deg,
+      var(--primary-0) -23%,
+      var(--primary-20),
+      var(--primary-0) 51%
+  );
+
+  --text-gradient: radial-gradient(
+      circle farthest-corner at center center,
+      #999999 0%,
+      #666666 100%
+  );
+}
+
+/* Additional styles remain unchanged */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-montserrat) !important;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background: var(--site-bg) no-repeat;
+}
+
+main {
+  align-self: center;
+}
+
+p {
+  color: var(--primary-100);
+  font-size: var(--text-general);
+}
+
+.color-gradient {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.max__width {
+  max-width: 117.8rem;
+}
