@@ -49,6 +49,10 @@
   .header .links a {
 	position: relative;
 	text-decoration: none;
+	
+  }
+  .menu-link {
+	color: white; /* Set link text color to white */
   }
   
   .header .links a::after {

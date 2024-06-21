@@ -1,11 +1,13 @@
 ---
+import './github.css'
 const username = 'nteezzz'; // Replace with your GitHub username
+
 ---
 
 <section id="github-stats" class="flex flex-col items-center w-full min-h-screen py-16 bg-gray-100">
   <div class="github-container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-8 text-center color-gradient">GitHub Stats</h2>
-    <div class="flex flex-wrap justify-center gap-6">
+    <h2 class="text-4xl font-bold mb-8 text-left color-gradient">GitHub Stats</h2>
+    <div class="flex flex-wrap stats-container justify-center gap-6">
       <img 
         src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=onedark`} 
         alt="GitHub Stats" 
@@ -34,15 +36,4 @@ const username = 'nteezzz'; // Replace with your GitHub username
   </div>
 </section>
 
-<style>
-    .github-container{
-        padding: 12rem;
-        justify-content: center;
-    }
-    @media screen and (max-width: 768px) {
-        .github-container{
-            display: none;
-        }
-    }
-  
-</style>
+

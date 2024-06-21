@@ -1,0 +1,31 @@
+.github-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 10rem;
+  }
+.github-container h2{
+    align-self: flex-start;
+}
+  
+  .stats-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    gap: 2rem; /* Space between the items */
+  }
+  
+  .trophies-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    gap: 2rem; /* Space between the items */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .github-container {
+      padding: 2rem; /* Reduce padding for smaller screens */
+      display: none;
+    }
+  
+
+  }
+  
